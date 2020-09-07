@@ -49844,3 +49844,27 @@ module.exports = __webpack_require__(/*! C:\xampp\htdocs\Laravel\PagWeb\resource
 /***/ })
 
 /******/ });
+
+
+
+const select = document.querySelector('#select');
+const opciones = document.querySelector('#opciones');
+const contenidoSelect = document.querySelector('#selec .contenido-select');
+const hiddenInput = document.querySelector('#inputSelect');
+
+
+document.querySelectorAll('#opciones > .opcion').forEach(
+	(opcion) =>{
+		opcion.addEventListener('click', (e) => {
+			e.preventDefault();
+			contenidoSelect.innerHTML = e.currentTarget.innerHTML;
+			select.classList.toggle('active');
+			opciones.classList.toggle('active');
+			hiddenInput.value = e.currentTarget.querySelector('.titulo').innerText;
+		});
+	});
+
+select.addEventListener('click', () =>{
+	select.classList.toggle('active');
+	opciones.classList.toggle('active');
+})
