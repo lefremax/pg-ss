@@ -53,6 +53,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'username' => ['required', 'string', 'max:255', 'unique:users'],
+            'pais' => ['required'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -69,7 +70,9 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'username' => $data['username'],
+            'pais' => $data['pais'],
             'password' => Hash::make($data['password']),
+            
         ]);
     }
 
@@ -77,7 +80,7 @@ class RegisterController extends Controller
     public function redirectTo(){
         if (\Auth::user()->id){
         
-         return route('profile.show',['user' =>  auth()->user()->id]);
+         return route('profile.edit',['user' =>  auth()->user()->id]);
        }
         
     }

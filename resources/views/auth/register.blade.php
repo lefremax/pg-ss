@@ -51,7 +51,18 @@
                                 @enderror
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="pais" class="col-md-4 col-form-label text-md-right">PAIS</label>
 
+                            <div class="col-md-6">
+                            <select id="pais" type="pais" class="inp-style  form-control" name="pais"> 
+                                   <option >SELECCIONAR...</option>
+                                   <option value="Colombia">COLOMBIA</option>
+                                   <option value="Peru">PERU</option>
+                                 </select>
+                    
+                            </div>
+                        </div>
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">CONTRASEÑA</label>
 
