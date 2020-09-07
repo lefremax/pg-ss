@@ -56,7 +56,7 @@
 
                             <div class="col-md-6">
                             <select id="pais" type="pais" class="inp-style  form-control" name="pais"> 
-                                   <option >SELECCIONAR...</option>
+                                   <option value="">SELECCIONAR...</option>
                                    <option value="Colombia">COLOMBIA</option>
                                    <option value="Peru">PERU</option>
                                  </select>
