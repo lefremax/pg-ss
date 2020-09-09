@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'MainController@index')->name('index');
-Route::get('/country/Colombia', 'MainController@postColombia')->name('colombia');
+Route::get('/Country/Colombia', 'MainController@postColombia')->name('colombia');
 Route::get('/country/Peru', 'MainController@postPeru')->name('peru');
 Auth::routes();
 

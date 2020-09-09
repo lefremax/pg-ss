@@ -15504,6 +15504,11 @@ a.text-dark:focus {
   }
 }
 
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
 .ftco-section {
   padding: 2em 0;
   position: relative;
@@ -15578,48 +15583,6 @@ a.text-dark:focus {
   position: relative;
   top: 1px;
   font-size: 14px;
-}
-
-.table {
-  margin-bottom: 0px;
-}
-
-.card .table {
-  padding: 15px 30px;
-}
-
-.card [class*=table-] {
-  color: #ffffff;
-  border-radius: 6px;
-}
-
-.card [class*=table-] .card-caption a,
-.card [class*=table-] .card-caption,
-.card [class*=table-] .icon i {
-  color: #ffffff;
-}
-
-.card [class*=table-] .icon i {
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-.card [class*=table-] .author a,
-.card [class*=table-] .ftr .stats,
-.card [class*=table-] .category,
-.card [class*=table-] .card-description {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.card [class*=table-] .author a:hover,
-.card [class*=table-] .author a:focus,
-.card [class*=table-] .author a:active {
-  color: #ffffff;
-}
-
-.card [class*=table-] h1 small,
-.card [class*=table-] h2 small,
-.card [class*=table-] h3 small {
-  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ============ Tarjeta de Perfil ============ */
@@ -16143,133 +16106,16 @@ button {
 
 /*====================SELECT BTN COUNTRY================*/
 
-a {
-	text-decoration: none;
-}
-
-.contenedor {
-	width: 100%;
-	max-width: 1000px;
-
-}
-.row{
-	margin-right: 0;
-}
-.selectbox {
-	width: 50%;
-	margin-left:500px;
-	position: relative;
-}
-
-.select {
-	background: #fff;
-	width: 100%;
-	box-shadow: 0px 0px 0px rgba(0, 0, 0, .16);
-	border-radius: 10px;
-	cursor: pointer;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	transition: .2s ease all;
-	margin-bottom: 30px;
-	padding: 20px;
-	position: relative;
-	z-index: 200;
-	border: 2px solid transparent;
-}
-
-.select.active,
-.select:hover {
-	box-shadow: 0px 5px 10px rgba(0, 0, 0, .16);
-	border: 2px solid #213f8f;
-}
-
-.select.active:before {
-	content: "";
-	display: block;
-	height: 0;
-	width: 0;
-	border-top: 15px solid #213f8f;
-	border-right: 15px solid transparent;
-	border-bottom: 15px solid transparent;
-	border-left: 15px solid transparent;
-	position: absolute;
-	bottom: -30px;
-	left: calc(50% - 15px);
-}
-
-.select i {
-	font-size: 30px;
-	margin-left: 30px;
-	color: #213f8f;
-}
-
-.titulo {
-	margin-bottom: 10px;
-	color: #000;
-	font-weight: 600;
-	font-size: 20px;
-}
-
-.descripcion {
-	font-size: 18px;
-	color: #434343;
-}
-
-.opciones {
-	background: #fff;
-	border-radius: 10px;
-	box-shadow: 0px 5px 10px rgba(0,0,0,.16);
-	max-height: 400px;
-	overflow: auto;
-	z-index: 100;
-	width: 100%;
-	display: none;
-}
-
-.opciones.active {
-	display: block;
-	animation: fadeIn .3s forwards;
-}
-
-@keyframes fadeIn {
-	from {
-		transform: translateY(-200px) scale(.5);
-	}
-	to {
-		transform: translateY(0) scale(1);
-	}
-}
-
 .contenido-opcion {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	transition: .2s ease all;
-}
-
-.opciones .contenido-opcion {
-	padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease all;
 }
 
 .contenido-opcion img {
-	width: 60px;
-	height: 60px;
-	margin-right: 30px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
-.opciones .contenido-opcion:hover {
-	background: #213F8F;
-}
-
-.opciones .contenido-opcion:hover .titulo,
-.opciones .contenido-opcion:hover .descripcion {
-	color: #fff;
-}
-
-@media screen and (max-width: 800px){
-	.selectbox {
-		width: 100%;
-		margin-left: 0;
-	}
-}

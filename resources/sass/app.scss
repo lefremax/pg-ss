@@ -18,6 +18,11 @@
     border-radius: $radius;
 }
 
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
 
 //style
 
@@ -98,47 +103,7 @@
     }
 }
 
-.table {
-    margin-bottom: 0px;
-}
 
-.card .table {
-    padding: 15px 30px;
-}
-
-.card [class*="table-"] {
-    color: $white;
-    border-radius: 6px;
-}
-
-.card [class*="table-"] .card-caption a,
-.card [class*="table-"] .card-caption,
-.card [class*="table-"] .icon i {
-    color: $white;
-}
-
-.card [class*="table-"] .icon i {
-    border-color: rgba(255, 255, 255, 0.25);
-}
-
-.card [class*="table-"] .author a,
-.card [class*="table-"] .ftr .stats,
-.card [class*="table-"] .category,
-.card [class*="table-"] .card-description {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.card [class*="table-"] .author a:hover,
-.card [class*="table-"] .author a:focus,
-.card [class*="table-"] .author a:active {
-    color: $white;
-}
-
-.card [class*="table-"] h1 small,
-.card [class*="table-"] h2 small,
-.card [class*="table-"] h3 small {
-    color: rgba(255, 255, 255, 0.8);
-}
 
 /* ============ Tarjeta de Perfil ============ */
 
@@ -689,4 +654,19 @@ button {
         padding-top: 1rem;
         color: $letra1;
     }
+}
+
+/*====================SELECT BTN COUNTRY================*/
+
+.contenido-opcion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: .2s ease all;
+}
+
+.contenido-opcion img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }

@@ -25,11 +25,22 @@ class MainController extends Controller
       // ->orderBy('created_at', 'DESC')
       // ->paginate(20)
       // ->get();
-
-      // $pais= 'Colombia';
-      // $post = DB::table('profiles')-> where('pais' , $pais)->get();
-      // return view('main.index', compact('post'));
-      
+    
+      $pais= 'Colombia';
+ 
+       $sel = User::Select('id')->where('pais','=',$pais);
+       $post = Profile::whereIn('user_id', $sel)->orderBy('created_at', 'DESC')->paginate(20);
+     // dd($post);
+       return view('main.index', compact('post'));
+    
     }
+    public function postPeru(){
 
+      $pais= 'Peru';
+      $sel = User::Select('id')->where('pais','=',$pais);
+     $post = Profile::whereIn('user_id', $sel)->orderBy('created_at', 'DESC')->paginate(20);
+     // dd($post);
+       return view('main.index', compact('post'));
+    
+    }
 }
