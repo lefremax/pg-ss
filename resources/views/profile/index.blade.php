@@ -73,7 +73,7 @@
      
       <div class="project">
                
-               <img  type="button" data-toggle="modal" data-target="#FotoModal-{{$post->id}}" src="/storage/{{ $post->image}}" />
+               <img  type="button" data-toggle="modal" data-target="#FotoModal-{{$post->id}}" src="/images/{{ $user->profile->image }}" />
                
                @can ('update', $user->profile)
                <form action="/profile/{{$post->id}}" enctype="multipart/form-data" method="post">
@@ -97,7 +97,7 @@
       </div>
       <div class="modal-body">
           <div class="mdalfoto">
-              <img class="w-100"src="{{$post->image}}" />
+              <img class="w-100"src="/images/{{$post->image}}" />
               <div class="dcap">
                   <p class="pdd">{{$user->username}}</p>
                  <p> {{$post->caption}} </p>
