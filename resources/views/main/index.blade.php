@@ -31,7 +31,7 @@
                             <div class="card card-profile">
                                 <div class="card-image">
                                 
-                                    <a type="button" class="btn-imagen" href="/profile/{{$posts->id}}"> <img class="img" src="/images/{{$posts->user->profile->image}}">
+                                    <a type="button" class="btn-imagen" href="/profile/{{$posts->id}}"> <img class="img" src="{{$posts->user->profile->profileImage()}}">
                                     </a>
                                
                                 </div>
