@@ -26,7 +26,7 @@
         <div class="container">
             <div class="row d-flex">
                 <div class="col-md-5  img">
-                <img src="{{ $user->profile->profileImage()}}" class="w-100">
+                <img src="/images/{{ $user->profile->image }}" class="w-100">
                 </div>
                 <div class="col-md-7 p-4 p-md-5">
                
@@ -97,7 +97,7 @@
       </div>
       <div class="modal-body">
           <div class="mdalfoto">
-              <img class="w-100"src="/storage/{{$post->image}}" />
+              <img class="w-100"src="{{$post->image}}" />
               <div class="dcap">
                   <p class="pdd">{{$user->username}}</p>
                  <p> {{$post->caption}} </p>
