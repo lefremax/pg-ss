@@ -25,5 +25,5 @@ Route::post('/p','PostsController@store');
 
 Route::get('/profile/{user}', 'ProfilesController@index')->name('profile.show');
 Route::get('/profile/{user}/edit', 'ProfilesController@edit')->name('profile.edit');
-Route::patch('/profile/{user}', 'testprofileController@update')->name('profile.update');
+Route::patch('/profile/{user}', 'ProfilesController@update')->name('profile.update');
 Route::delete('/profile/{user}', 'PostsController@destroy')->name('posts.destroy');
