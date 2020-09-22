@@ -21,6 +21,9 @@ class CreateUsersTable extends Migration
             $table->string('pais')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('foto_dni')->nullable();;
+            $table->string('file_dni')->nullable();;
+            $table->boolean('active')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

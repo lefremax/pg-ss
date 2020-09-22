@@ -11,10 +11,10 @@ class MainController extends Controller
 {
     public function index(User $user){
 
-      $users = $user->pluck('users.id');
-      $post = Profile::whereIn('user_id', $users)->orderBy('created_at', 'DESC')->paginate(20);
+      $users = User::Select('id')->where('active',1);
+      $post = Profile::whereIn('user_id', $users)
+      ->orderBy('created_at', 'DESC')->paginate(20);
      
-
        return view('main.index', compact('post'));
     }
   
@@ -28,7 +28,7 @@ class MainController extends Controller
     
       $pais= 'Colombia';
  
-       $sel = User::Select('id')->where('pais','=',$pais);
+       $sel = User::Select('id')->where('pais','=',$pais)->where('active',1);
        $post = Profile::whereIn('user_id', $sel)->orderBy('created_at', 'DESC')->paginate(20);
      // dd($post);
        return view('main.index', compact('post'));
@@ -37,8 +37,8 @@ class MainController extends Controller
     public function postPeru(){
 
       $pais= 'Peru';
-      $sel = User::Select('id')->where('pais','=',$pais);
-     $post = Profile::whereIn('user_id', $sel)->orderBy('created_at', 'DESC')->paginate(20);
+      $sel = User::Select('id')->where('pais','=',$pais)->where('active',1);
+       $post = Profile::whereIn('user_id', $sel)->orderBy('created_at', 'DESC')->paginate(20);
      // dd($post);
        return view('main.index', compact('post'));
     

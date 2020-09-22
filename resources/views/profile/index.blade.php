@@ -2,6 +2,13 @@
 
 @section('content')
 <div class="container">
+    @if ($user->active == 0)
+
+    <div class="alert alert-warning" role="alert">
+        <strong>¡Tu perfil se mostrara publico al verificar que los datos suministrados sea reales!</strong>
+    </div>
+        
+    @endif
 <section class="section-1 container-fluid p-0">
         <div class="cover">
             <div class="content text-center">

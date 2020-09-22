@@ -22,33 +22,35 @@
 
     </div>
         <!-- Tarjetas de Perfiles -->
-            <div class="cards-7 section-gray">
-                <div class="container">
-               
-                    <div class="row"> 
-                    @foreach($post as $posts)
-                        <div class="col-md-3">
-                            <div class="card card-profile">
-                                <div class="card-image">
-                                
-                                    <a type="button" class="btn-imagen" href="/profile/{{$posts->id}}"> <img class="img" src="{{$posts->user->profile->profileImage()}}">
-                                    </a>
-                               
-                                </div>
-                                <div class="table">
-                                    <h4 class="card-caption">{{$posts->user->username}}</h4>
-                                </div>
+
+        <div class="cards-7 section-gray">
+            <div class="container">
+           
+                <div class="row"> 
+                @foreach($post as $posts)
+                    <div class="col-md-3">
+                        <div class="card card-profile">
+                            <div class="card-image">
+                            
+                                <a type="button" class="btn-imagen" href="/profile/{{$posts->id}}"> <img class="img" src="{{$posts->user->profile->profileImage()}}">
+                                </a>
+                           
                             </div>
-                        </div> 
-                        @endforeach
-                    </div>
-                </div>
-                <div class="row">
-                 <div class="col-12 d-flex justify-content-center">
-                 {{-- {{$post->links()}} --}}
-                 </div>
+                            <div class="table">
+                                <h4 class="card-caption">{{$posts->user->username}}</h4>
+                            </div>
+                        </div>
+                    </div> 
+                    @endforeach
                 </div>
             </div>
-        </section>
+            <div class="row">
+             <div class="col-12 d-flex justify-content-center">
+             {{-- {{$post->links()}} --}}
+             </div>
+            </div>
+        </div>
+    </section>
+
 
 @endsection

@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -65,22 +66,23 @@ class RegisterController extends Controller
      * @return \App\User
      */
     protected function create(array $data)
-    {
+    {   
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'username' => $data['username'],
             'pais' => $data['pais'],
             'password' => Hash::make($data['password']),
-            
         ]);
+            
     }
 
 
     public function redirectTo(){
         if (\Auth::user()->id){
         
-         return route('profile.edit',['user' =>  auth()->user()->id]);
+         return route('cargarfotoAU',['user' =>  auth()->user()->username]);
        }
         
     }
