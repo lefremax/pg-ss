@@ -5,7 +5,10 @@
     @if ($user->active == 0)
 
     <div class="alert alert-warning" role="alert">
-        <strong>¡Tu perfil se mostrara publico al verificar que los datos suministrados sea reales!</strong>
+        <strong>¡Tu perfil se mostrara publico al verificar que los datos suministrados sea reales!</strong><br>
+        @if (($user->foto_dni == '') AND ($user->file_dni == ''))
+        <a href="{{route('cargarfotoAU')}}" class="btn btn-outline-danger mt-4" style="display:inline-block">Cargar Fotos</a>
+        @endif
     </div>
         
     @endif
